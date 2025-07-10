@@ -1,101 +1,73 @@
-/* Dashboard.css */
-
 .dashboard {
-    max-width: 600px;
-    margin: 3rem auto;
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    font-family: 'Segoe UI', Roboto, sans-serif;
+    padding: 1rem;
 }
 
 .dashboard-header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.dashboard-header h1 {
+    font-size: 1.5rem;
 }
 
 .logout-btn {
-    padding: 0.5rem 1rem;
-    background-color: #ff4d4f;
-    color: #fff;
+    background: #e53e3e;
+    color: white;
     border: none;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.logout-btn:hover {
-    background-color: #d9363e;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
 }
 
 .dashboard form {
     display: flex;
-    gap: 10px;
-    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.dashboard input[type="text"] {
+.dashboard input {
     flex: 1;
-    padding: 0.75rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.dashboard input[type="text"]:focus {
-    border-color: #007bff;
-    outline: none;
+    min-width: 200px;
 }
 
 .dashboard button[type="submit"] {
-    background-color: #007bff;
+    background: #3182ce;
     color: white;
     border: none;
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-}
-
-.dashboard button[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-.dashboard p {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: #444;
-    font-size: 0.95rem;
-}
-
-.dashboard h3 {
-    margin-top: 2rem;
-    color: #444;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
 }
 
 .dashboard ul {
     list-style: none;
     padding: 0;
-    margin-top: 1rem;
 }
 
 .dashboard li {
-    padding: 0.75rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin-bottom: 0.75rem;
-    background-color: #f9f9f9;
-    transition: background 0.3s ease;
+    background: white;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.dashboard li:hover {
-    background-color: #f0f8ff;
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard form {
+        flex-direction: column;
+    }
+
+    .dashboard input,
+    .dashboard button[type="submit"] {
+        width: 100%;
+    }
 }
