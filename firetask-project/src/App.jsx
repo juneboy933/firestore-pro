@@ -5,12 +5,14 @@ import Dashboard from "./pages/Dashboard";
 import ProjectDetail from "./pages/ProjectDetail";
 import ProjectSettings from "./pages/ProjectSettings";
 import Profile from "./pages/Profile";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SignUp />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/auth" element={<SignUp/>}/>
         
         <Route
           path="/dashboard"
